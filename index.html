@@ -24,6 +24,11 @@
           <label for="gross-bill-input">Bill</label>
           <input type="number" id="gross-bill-input" />
         </div>
+        <!-- NUMBER OF PEOPLE -->
+        <div class="input-container contributer-quantity">
+          <label for="contributer-quantity-input">Number of people</label>
+          <input type="number" id="contributer-quantity-input" />
+        </div>
         <!-- SELECT TIP -->
 
         <fieldset class="select-tip">
@@ -49,32 +54,25 @@
               <label>50%</label>
               <input type="radio" value="50" class="select-tip-item-input" />
             </div>
-            <div class="select-tip-item">
-              <input type="number" placeholder="Custom" />
-            </div>
+            <input type="number" placeholder="Custom" />
           </div>
         </fieldset>
 
-        <!-- NUMBER OF PEOPLE -->
-        <div class="input-container contributer-quantity">
-          <label for="contributer-quantity-input">Number of people</label>
-          <input type="number" id="contributer-quantity-input" />
-        </div>
         <!-- CONCLUSION(TOTAL BILL) -->
         <div class="total-output">
           <div class="tip-amount-wrap">
             <div class="tip-amount-head">
-              <span>Tip Amount </span>
-              <span>/ person</span>
+              <span class="tip-amount-head-title">Tip Amount </span>
+              <span class="tip-amount-head-subtitle">/ person</span>
             </div>
-            <span>$4.27</span>
+            <span class="tip-amount">$4.27</span>
           </div>
           <div class="net-bill-wrap">
             <div class="net-bill-head">
-              <span>Tip Amount </span>
-              <span>/ person</span>
+              <span class="net-bill-head-title">Tip Amount </span>
+              <span class="net-bill-head-subtitle">/ person</span>
             </div>
-            <span>$32.79</span>
+            <span class="net-bill">$32.79</span>
           </div>
           <button class="btn reset-btn">reset</button>
         </div>

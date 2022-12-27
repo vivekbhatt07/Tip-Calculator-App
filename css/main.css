@@ -37,13 +37,15 @@ h1 {
 
 input {
   border: none;
-  padding: 0.5em;
   background-color: var(--input-bg-color);
   font-family: inherit;
   font-size: 1rem;
   font-weight: 700;
   border-radius: 4px;
   color: hsl(183, 100%, 15%);
+  background-color: var(--input-bg-color);
+  padding: 0.5em;
+  text-align: right;
 }
 
 input::placeholder {
@@ -51,6 +53,7 @@ input::placeholder {
   font-weight: 700;
   text-transform: capitalize;
   color: hsl(186, 14%, 43%);
+  text-align: center;
 }
 
 button {
@@ -79,6 +82,7 @@ button {
     "tip"
     "qty"
     "output";
+  gap: 1em;
 }
 
 .gross-bill {
@@ -108,10 +112,18 @@ button {
   border-radius: 16px;
 }
 
-.gross-bill-input {
+#gross-bill-input {
   background-image: url(../images/icon-dollar.svg);
+}
+
+#contributer-quantity-input {
+  background-image: url(../images/icon-person.svg);
+}
+
+#gross-bill-input,
+#contributer-quantity-input {
   background-repeat: no-repeat;
-  background-position: 10% 10%;
+  background-position: 0.5em;
 }
 
 /* SELECT TIP */
@@ -127,16 +139,22 @@ button {
 
 .select-tip-body {
   display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr;
-  gap: 0.5em;
+  grid-template: 1fr 1fr 1fr / 48% 48%;
+  gap: 4%;
 }
 
 .select-tip-item {
   position: relative;
-  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 4px;
+}
+
+.select-tip-item label {
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
 }
 
 .select-tip-item-input {
@@ -153,7 +171,41 @@ button {
 .total-output {
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  padding: 1em;
+  gap: 1em;
+}
+
+.tip-amount-wrap,
+.net-bill-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tip-amount-head,
+.net-bill-head {
+  display: flex;
+  flex-direction: column;
+}
+
+.tip-amount-head-title,
+.net-bill-head-title {
+  font-size: 16px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+.tip-amount-head-subtitle,
+.net-bill-head-subtitle {
+  font-size: 14px;
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+}
+
+.tip-amount,
+.net-bill {
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
 }
 
 @media (min-width: 1280px) {
