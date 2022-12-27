@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Tip calculator app</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="tip-app-wrapper">
+      <h1 class="tip-app-head">spli <br />tter</h1>
+      <div class="tip-app-body">
+        <!-- BILL AMOUNT -->
+        <div class="gross-bill">
+          <label for="gross-bill-input">Bill</label>
+          <input type="number" id="gross-bill-input" />
+        </div>
+        <!-- SELECT TIP -->
+        <div class="select-tip">
+          <div><label>5%</label><input type="radio" /></div>
+          <div><label>10%</label><input type="radio" /></div>
+          <div><label>15%</label><input type="radio" /></div>
+          <div><label>25%</label><input type="radio" /></div>
+          <div><label>50%</label><input type="radio" /></div>
+          <div><input type="number" placeholder="Custom" /></div>
+        </div>
+        <!-- NUMBER OF PEOPLE -->
+        <div class="contributer-quantity">
+          <label for="contributer-quantity-input">Number of people</label>
+          <input type="number" id="contributer-quantity-input" />
+        </div>
+        <!-- CONCLUSION(TOTAL BILL) -->
+        <div class="tip-info-output">
+          <div class="tip-amount-wrap">
+            <div class="tip-amount-head">
+              <span>Tip Amount </span>
+              <span>/ person</span>
+            </div>
+            <span>$4.27</span>
+          </div>
+          <div class="net-bill-wrap">
+            <div class="net-bill-head">
+              <span>Tip Amount </span>
+              <span>/ person</span>
+            </div>
+            <span>$32.79</span>
+          </div>
+          <button class="btn reset-btn"></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
