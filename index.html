@@ -20,26 +20,48 @@
       <h1 class="tip-app-head">spli <br />tter</h1>
       <div class="tip-app-body">
         <!-- BILL AMOUNT -->
-        <div class="gross-bill">
+        <div class="input-container gross-bill">
           <label for="gross-bill-input">Bill</label>
           <input type="number" id="gross-bill-input" />
         </div>
         <!-- SELECT TIP -->
-        <div class="select-tip">
-          <div><label>5%</label><input type="radio" /></div>
-          <div><label>10%</label><input type="radio" /></div>
-          <div><label>15%</label><input type="radio" /></div>
-          <div><label>25%</label><input type="radio" /></div>
-          <div><label>50%</label><input type="radio" /></div>
-          <div><input type="number" placeholder="Custom" /></div>
-        </div>
+
+        <fieldset class="select-tip">
+          <legend class="select-tip-head">select tip %</legend>
+          <div class="select-tip-body">
+            <div class="select-tip-item">
+              <label>5%</label>
+              <input type="radio" value="5" class="select-tip-item-input" />
+            </div>
+            <div class="select-tip-item">
+              <label>10%</label>
+              <input type="radio" value="10" class="select-tip-item-input" />
+            </div>
+            <div class="select-tip-item">
+              <label>15%</label>
+              <input type="radio" value="15" class="select-tip-item-input" />
+            </div>
+            <div class="select-tip-item">
+              <label>25%</label>
+              <input type="radio" value="25" class="select-tip-item-input" />
+            </div>
+            <div class="select-tip-item">
+              <label>50%</label>
+              <input type="radio" value="50" class="select-tip-item-input" />
+            </div>
+            <div class="select-tip-item">
+              <input type="number" placeholder="Custom" />
+            </div>
+          </div>
+        </fieldset>
+
         <!-- NUMBER OF PEOPLE -->
-        <div class="contributer-quantity">
+        <div class="input-container contributer-quantity">
           <label for="contributer-quantity-input">Number of people</label>
           <input type="number" id="contributer-quantity-input" />
         </div>
         <!-- CONCLUSION(TOTAL BILL) -->
-        <div class="tip-info-output">
+        <div class="total-output">
           <div class="tip-amount-wrap">
             <div class="tip-amount-head">
               <span>Tip Amount </span>
@@ -54,7 +76,7 @@
             </div>
             <span>$32.79</span>
           </div>
-          <button class="btn reset-btn"></button>
+          <button class="btn reset-btn">reset</button>
         </div>
       </div>
     </div>

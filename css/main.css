@@ -7,6 +7,8 @@
   --tip-inactive-text-color: hsl(0, 0%, 100%);
   --tip-active-text-color: ;
   --tip-output-bg-color: hsl(172, 67%, 45%);
+  --body-bg: hsl(185, 41%, 84%);
+  --input-bg-color: hsl(189, 41%, 97%);
 }
 
 *,
@@ -19,13 +21,155 @@
 
 body {
   font-family: var(--font-family);
-  background-color: #000;
+  background-color: var(--body-bg);
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: hsl(183, 100%, 15%);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+input {
+  border: none;
+  padding: 0.5em;
+  background-color: var(--input-bg-color);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  color: hsl(183, 100%, 15%);
+}
+
+input::placeholder {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: hsl(186, 14%, 43%);
+}
+
+button {
+  text-transform: uppercase;
+  border: none;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-family: inherit;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  opacity: 0.8;
+  letter-spacing: 1.5px;
+  background-color: hsl(172, 67%, 45%);
 }
 
 .tip-app-body {
+  max-width: 600px;
   background-color: var(--card-bg-color);
   padding: 1.5em;
   border-radius: 16px;
   display: grid;
+  grid-template: 1fr 2fr 1fr 2fr / 1fr;
+  grid-template-areas:
+    "bill"
+    "tip"
+    "qty"
+    "output";
+}
+
+.gross-bill {
+  grid-area: bill;
+}
+
+.select-tip {
+  grid-area: tip;
+}
+
+.contributer-quantity {
+  grid-area: qty;
+}
+
+.total-output {
+  grid-area: output;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.total-output {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 16px;
+}
+
+.gross-bill-input {
+  background-image: url(../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 10% 10%;
+}
+
+/* SELECT TIP */
+.select-tip {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.select-tip-head {
+  text-transform: capitalize;
+}
+
+.select-tip-body {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  gap: 0.5em;
+}
+
+.select-tip-item {
+  position: relative;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-tip-item-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* TOTAL OUTPUT */
+
+.total-output {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+@media (min-width: 1280px) {
+  .tip-app-body {
+    grid-template: 1fr 1.5fr 1fr / 1fr 1fr;
+    grid-template-areas:
+      "bill output"
+      "tip output"
+      "qty output";
+  }
+
+  /* SELECT TIP */
+
+  .select-tip-body {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    gap: 0.5em;
+  }
 }
