@@ -35,44 +35,73 @@
           <legend class="select-tip-head">select tip %</legend>
           <div class="select-tip-body">
             <div class="select-tip-item">
-              <label>5%</label>
-              <input type="radio" value="5" class="select-tip-item-input" />
+              <label for="five-percent-tip">5%</label>
+              <input
+                id="five-percent-tip"
+                type="radio"
+                value="5"
+                class="select-tip-item-input"
+              />
             </div>
             <div class="select-tip-item">
-              <label>10%</label>
-              <input type="radio" value="10" class="select-tip-item-input" />
+              <label for="ten-percent-tip">10%</label>
+              <input
+                id="ten-percent-tip"
+                type="radio"
+                value="10"
+                class="select-tip-item-input"
+              />
             </div>
             <div class="select-tip-item">
-              <label>15%</label>
-              <input type="radio" value="15" class="select-tip-item-input" />
+              <label for="fifteen-percent-tip">15%</label>
+              <input
+                id="fifteen-percent-tip"
+                type="radio"
+                value="15"
+                class="select-tip-item-input"
+              />
             </div>
             <div class="select-tip-item">
-              <label>25%</label>
-              <input type="radio" value="25" class="select-tip-item-input" />
+              <label for="twentyFive-percent-tip">25%</label>
+              <input
+                id="twentyFive-percent-tip"
+                type="radio"
+                value="25"
+                class="select-tip-item-input"
+              />
             </div>
             <div class="select-tip-item">
-              <label>50%</label>
-              <input type="radio" value="50" class="select-tip-item-input" />
+              <label for="fifty-percent-tip">50%</label>
+              <input
+                id="fifty-percent-tip"
+                type="radio"
+                value="50"
+                class="select-tip-item-input"
+              />
             </div>
-            <input type="number" placeholder="Custom" />
+            <input class="custom-tip" type="number" placeholder="Custom" />
           </div>
         </fieldset>
 
         <!-- CONCLUSION(TOTAL BILL) -->
         <div class="total-output">
-          <div class="tip-amount-wrap">
-            <div class="tip-amount-head">
-              <span class="tip-amount-head-title">Tip Amount </span>
-              <span class="tip-amount-head-subtitle">/ person</span>
+          <div>
+            <!-- TIP AMOUNT -->
+            <div class="output-amount-wrap">
+              <div class="output-amount-head">
+                <span class="output-amount-title">Tip Amount </span>
+                <span class="output-amount-subtitle">/ person</span>
+              </div>
+              <span class="output-amount tip-amount">$4.27</span>
             </div>
-            <span class="tip-amount">$4.27</span>
-          </div>
-          <div class="net-bill-wrap">
-            <div class="net-bill-head">
-              <span class="net-bill-head-title">Tip Amount </span>
-              <span class="net-bill-head-subtitle">/ person</span>
+            <!-- TOTAL -->
+            <div class="output-amount-wrap">
+              <div class="output-amount-head">
+                <span class="output-amount-title">Tip Amount </span>
+                <span class="output-amount-subtitle">/ person</span>
+              </div>
+              <span class="output-amount net-bill">$32.79</span>
             </div>
-            <span class="net-bill">$32.79</span>
           </div>
           <button class="btn reset-btn">reset</button>
         </div>

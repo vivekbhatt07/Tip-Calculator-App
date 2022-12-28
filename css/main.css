@@ -46,6 +46,7 @@ input {
   background-color: var(--input-bg-color);
   padding: 0.5em;
   text-align: right;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 input::placeholder {
@@ -54,6 +55,13 @@ input::placeholder {
   text-transform: capitalize;
   color: hsl(186, 14%, 43%);
   text-align: center;
+}
+
+label,
+legend {
+  font-size: 14px;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
 }
 
 button {
@@ -83,6 +91,7 @@ button {
     "qty"
     "output";
   gap: 1em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .gross-bill {
@@ -105,11 +114,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-.total-output {
-  background-color: hsl(183, 100%, 15%);
-  border-radius: 16px;
 }
 
 #gross-bill-input {
@@ -140,7 +144,7 @@ button {
 .select-tip-body {
   display: grid;
   grid-template: 1fr 1fr 1fr / 48% 48%;
-  gap: 4%;
+  gap: 0.6em;
 }
 
 .select-tip-item {
@@ -153,16 +157,23 @@ button {
 }
 
 .select-tip-item label {
-  font-weight: 700;
   color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
+.select-tip-item label,
 .select-tip-item-input {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.select-tip-item-input {
   z-index: -1;
 }
 
@@ -173,36 +184,33 @@ button {
   flex-direction: column;
   padding: 1em;
   gap: 1em;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 12px;
 }
 
-.tip-amount-wrap,
-.net-bill-wrap {
+.output-amount-wrap {
   display: flex;
   justify-content: space-between;
 }
 
-.tip-amount-head,
-.net-bill-head {
+.output-amount-head {
   display: flex;
   flex-direction: column;
 }
 
-.tip-amount-head-title,
-.net-bill-head-title {
+.output-amount-title {
   font-size: 16px;
   color: hsl(0, 0%, 100%);
   font-weight: 700;
 }
 
-.tip-amount-head-subtitle,
-.net-bill-head-subtitle {
+.output-amount-subtitle {
   font-size: 14px;
   color: hsl(186, 14%, 43%);
   font-weight: 700;
 }
 
-.tip-amount,
-.net-bill {
+.output-amount {
   font-size: 24px;
   font-weight: 700;
   color: hsl(172, 67%, 45%);
@@ -210,18 +218,28 @@ button {
 
 @media (min-width: 1280px) {
   .tip-app-body {
-    grid-template: 1fr 1.5fr 1fr / 1fr 1fr;
+    grid-template: 1fr 1.5fr 1fr / repeat(2, minmax(200px, 1fr));
     grid-template-areas:
       "bill output"
       "tip output"
       "qty output";
+    gap: 1.5em;
   }
 
   /* SELECT TIP */
 
   .select-tip-body {
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    grid-template: 1fr 1fr / repeat(3, minmax(55px, 1fr));
     gap: 0.5em;
+  }
+
+  .custom-tip {
+  }
+
+  /* TOTAL OUTPUT */
+
+  .total-output {
+    justify-content: space-between;
   }
 }
