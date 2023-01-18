@@ -22,12 +22,12 @@
         <!-- BILL AMOUNT -->
         <div class="input-container gross-bill">
           <label for="gross-bill-input">Bill</label>
-          <input type="number" id="gross-bill-input" />
+          <input type="number" class="input" id="gross-bill-input" />
         </div>
         <!-- NUMBER OF PEOPLE -->
         <div class="input-container contributer-quantity">
           <label for="contributer-quantity-input">Number of people</label>
-          <input type="number" id="contributer-quantity-input" />
+          <input type="number" class="input" id="contributer-quantity-input" />
         </div>
         <!-- SELECT TIP -->
 
@@ -40,7 +40,7 @@
                 id="five-percent-tip"
                 type="radio"
                 value="5"
-                class="select-tip-item-input"
+                class="select-tip-item-input btn-input"
               />
             </div>
             <div class="select-tip-item">
@@ -49,7 +49,7 @@
                 id="ten-percent-tip"
                 type="radio"
                 value="10"
-                class="select-tip-item-input"
+                class="select-tip-item-input btn-input"
               />
             </div>
             <div class="select-tip-item">
@@ -58,7 +58,7 @@
                 id="fifteen-percent-tip"
                 type="radio"
                 value="15"
-                class="select-tip-item-input"
+                class="select-tip-item-input btn-input"
               />
             </div>
             <div class="select-tip-item">
@@ -67,7 +67,7 @@
                 id="twentyFive-percent-tip"
                 type="radio"
                 value="25"
-                class="select-tip-item-input"
+                class="select-tip-item-input btn-input"
               />
             </div>
             <div class="select-tip-item">
@@ -76,10 +76,15 @@
                 id="fifty-percent-tip"
                 type="radio"
                 value="50"
-                class="select-tip-item-input"
+                class="select-tip-item-input btn-input"
               />
             </div>
-            <input class="custom-tip" type="number" placeholder="Custom" />
+            <input
+              class="input"
+              type="number"
+              placeholder="Custom"
+              id="custom-tip"
+            />
           </div>
         </fieldset>
 
@@ -97,7 +102,7 @@
             <!-- TOTAL -->
             <div class="output-amount-wrap">
               <div class="output-amount-head">
-                <span class="output-amount-title">Tip Amount </span>
+                <span class="output-amount-title">Total Bill </span>
                 <span class="output-amount-subtitle">/ person</span>
               </div>
               <span class="output-amount net-bill">$32.79</span>
@@ -107,5 +112,6 @@
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
