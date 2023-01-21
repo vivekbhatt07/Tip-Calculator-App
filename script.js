@@ -13,6 +13,9 @@ const customTipInput = document.querySelector("#custom-tip");
 
 const billInfo = { grossBill: "", contributer: "", customTip: "" };
 
+resetBtn.style.cursor = "not-allowed";
+resetBtn.disabled = true;
+
 for (let i = 0; i < inputList.length; i++) {
   inputList[i].addEventListener("input", (event) => {
     if (event.target.id == "gross-bill-input") {
@@ -35,8 +38,8 @@ for (let i = 0; i < btnInputList.length; i++) {
 
 function outputHandler(tip, bill) {
   if (!(tip == Infinity && bill == Infinity)) {
-    tipAmountOutput.textContent = `${tip.toFixed(2)}`;
-    billAmountOutput.textContent = `${(bill + tip).toFixed(2)}`;
+    tipAmountOutput.textContent = `$${tip.toFixed(2)}`;
+    billAmountOutput.textContent = `$${(bill + tip).toFixed(2)}`;
   }
 }
 
@@ -44,6 +47,10 @@ function tipHandler(billInfo) {
   let { grossBill, contributer, customTip } = billInfo;
 
   if (grossBill > 0 && contributer > 0 && customTip >= 0) {
+    // resetBtn.style.opacity = "1";
+    resetBtn.style.cursor = "pointer";
+    resetBtn.disabled = false;
+
     const tipAmount = (grossBill * customTip) / 100;
     const individualTip = tipAmount / contributer;
     const individualBill = grossBill / contributer;
@@ -58,6 +65,9 @@ resetBtn.addEventListener("click", () => {
   contributerQuantityInput.value = "";
   grossBillInput.value = "";
   customTipInput.value = "";
-  tipAmountOutput.textContent = "----";
-  billAmountOutput.textContent = "----";
+  tipAmountOutput.textContent = "$0.00";
+  billAmountOutput.textContent = "$0.00";
+  resetBtn.style.opacity = "0.5";
+  resetBtn.style.cursor = "not-allowed";
+  resetBtn.disabled = true;
 });
