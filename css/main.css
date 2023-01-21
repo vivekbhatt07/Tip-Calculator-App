@@ -150,6 +150,7 @@ button {
 
 .select-tip-head {
   text-transform: capitalize;
+  margin-bottom: 8px;
 }
 
 .select-tip-body {
@@ -221,6 +222,7 @@ button {
 .output-amount-wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .output-amount-head {
@@ -268,7 +270,7 @@ button {
 
 @media (min-width: 1280px) {
   .tip-app-wrapper {
-    max-width: 650px;
+    max-width: 700px;
     min-width: unset;
   }
 
@@ -287,5 +289,10 @@ button {
 
   .total-output {
     justify-content: space-between;
+    padding: 32px;
+  }
+
+  .output-amount {
+    font-size: 36px;
   }
 }
