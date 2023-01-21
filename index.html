@@ -22,12 +22,17 @@
         <!-- BILL AMOUNT -->
         <div class="input-container gross-bill">
           <label for="gross-bill-input">Bill</label>
-          <input type="number" class="input" id="gross-bill-input" />
+          <input type="number" class="input" min="1" id="gross-bill-input" />
         </div>
         <!-- NUMBER OF PEOPLE -->
         <div class="input-container contributer-quantity">
           <label for="contributer-quantity-input">Number of people</label>
-          <input type="number" class="input" id="contributer-quantity-input" />
+          <input
+            type="number"
+            class="input"
+            min="1"
+            id="contributer-quantity-input"
+          />
         </div>
         <!-- SELECT TIP -->
 
@@ -84,6 +89,7 @@
               type="number"
               placeholder="Custom"
               id="custom-tip"
+              min="0"
             />
           </div>
         </fieldset>
@@ -97,7 +103,7 @@
                 <span class="output-amount-title">Tip Amount </span>
                 <span class="output-amount-subtitle">/ person</span>
               </div>
-              <span class="output-amount tip-amount">$4.27</span>
+              <span class="output-amount tip-amount">----</span>
             </div>
             <!-- TOTAL -->
             <div class="output-amount-wrap">
@@ -105,7 +111,7 @@
                 <span class="output-amount-title">Total Bill </span>
                 <span class="output-amount-subtitle">/ person</span>
               </div>
-              <span class="output-amount net-bill">$32.79</span>
+              <span class="output-amount net-bill">----</span>
             </div>
           </div>
           <button class="btn reset-btn">reset</button>
