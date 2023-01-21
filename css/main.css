@@ -259,6 +259,7 @@ button {
   .tip-app-wrapper {
     max-width: 60%;
     min-width: unset;
+    gap: 24px;
   }
 
   .select-tip-body {
@@ -272,6 +273,7 @@ button {
   .tip-app-wrapper {
     max-width: 700px;
     min-width: unset;
+    gap: 36px;
   }
 
   .tip-app-body {
