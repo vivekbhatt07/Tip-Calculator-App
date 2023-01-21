@@ -10,7 +10,6 @@ const contributerQuantityInput = document.querySelector(
 const grossBillInput = document.querySelector("#gross-bill-input");
 
 const customTipInput = document.querySelector("#custom-tip");
-console.log(customTipInput);
 
 const billInfo = { grossBill: "", contributer: "", customTip: "" };
 
