@@ -53,6 +53,9 @@ function tipHandler(billInfo) {
 }
 
 resetBtn.addEventListener("click", () => {
+  billInfo.grossBill = "";
+  billInfo.contributer = "";
+  billInfo.customTip = "";
   contributerQuantityInput.value = "";
   grossBillInput.value = "";
   customTipInput.value = "";
